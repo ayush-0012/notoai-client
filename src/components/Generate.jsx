@@ -100,9 +100,9 @@ const Genearate = () => {
               >
                 <Sparkles />
                 {loading ? (
-                  <span>Generating...</span>
+                  <span className="text-lg">Generating...</span>
                 ) : (
-                  <span>Generate Notes</span>
+                  <span className="text-lg">Generate Notes</span>
                 )}
               </button>
             </div>
@@ -180,7 +180,7 @@ const Genearate = () => {
 
           {generatingError && !fileLink && !notesLink && (
             <div>
-              <p className="text-lg font-semibold bg-clip-text text-transparent text-red-600 text-center mb-2">
+              <p className="text-lg font-semibold bg-clip-text text-transparent text-white text-center mb-2">
                 Error occured while generating notes :/
               </p>
             </div>
@@ -198,7 +198,7 @@ const Genearate = () => {
                 key={index}
                 className="border-[#321c43] border rounded-lg mb-2 mx-4 flex h-24"
               >
-                <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center ml-5 mt-3">
+                <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center ml-5 mt-3 text-purple-400">
                   {instruction.icon}
                 </div>
                 <div className="mt-3 flex flex-col ml-10 items-start">

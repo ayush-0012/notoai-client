@@ -81,11 +81,11 @@ const Profile = () => {
 
         <div>
           <button
-            className="text-white flex items-center justify-center hover:bg-[#321c43]/20 w-32 h-12 rounded-lg "
+            className="text-white flex items-center justify-center hover:bg-[#321c43]/20 w-32 h-12 rounded-lg text-lg"
             onClick={handleSignOut}
           >
             <LogOut className="w-4 h-4 text-gray-300" />
-            <span className=" ml-4 font-semibold text-md text-gray-300">
+            <span className=" ml-4 font-semibold text-md text-gray-300 ">
               Logout
             </span>
           </button>
@@ -120,7 +120,10 @@ const Profile = () => {
                 </p>
                 <div className="flex justify-between">
                   <div className=" text-purple-300  hover:underline hover:underline-offset-1">
-                    <button onClick={() => window.open(note.fileUrl, "_blank")}>
+                    <button
+                      onClick={() => window.open(note.fileUrl, "_blank")}
+                      className="text-lg"
+                    >
                       view notes
                     </button>
                   </div>

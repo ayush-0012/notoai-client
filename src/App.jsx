@@ -69,6 +69,13 @@ const RequireAuth = () => {
   return <Outlet />;
 };
 
+const userId = localStorage.getItem("userId");
+userId ? (
+  <Navigate to="/index.html" />
+) : (
+  <Navigate to="/" replace={{ state: { from: "/index.html" } }} />
+);
+
 function App() {
   console.log("app.jsx");
   const router = createBrowserRouter([

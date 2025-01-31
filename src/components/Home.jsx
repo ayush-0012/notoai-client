@@ -35,7 +35,9 @@ const Home = () => {
             if (chrome.runtime.lastError) {
               console.error(chrome.runtime.lastError);
             } else {
-              chrome.browserAction.setPopup({ popup: "popup.html#/generate" });
+              chrome.browserAction.setPopup({
+                popup: "popup.html#/index.html",
+              });
               chrome.action.click();
             }
           }
@@ -92,7 +94,9 @@ const Home = () => {
             {loading ? (
               <p>Loading...</p>
             ) : (
-              <p className="font-sans ml-3 text-white">Continue with Google</p>
+              <p className="font-sans ml-3 text-white text-base">
+                Continue with Google
+              </p>
             )}
           </button>
 
@@ -113,7 +117,7 @@ const Home = () => {
               key={index}
               className="w-full h-28 border rounded-lg flex items-center justify-start mb-3 border-[#321c43] bg-[#0f0e13]"
             >
-              <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center ml-5 mt-3">
+              <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center ml-5 mt-3 text-purple-400">
                 {feature.logo}
               </div>
               <div className="mt-3 flex flex-col ml-6 items-start">
